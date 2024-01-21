@@ -53,7 +53,7 @@ function Products() {
                     {!_.isEmpty(plants) && plants.map((plant) => (
 
                         <Col key={plant.id} md={3}>
-                            <Card key={plant.id} className={'product_card'}>
+                            <Card key={plant.id} className={'product_card mb-3'}>
                                 <div className={'img_trim'}>
                                 <img
                                     alt="Sample" className={'product_image img-fluid'   }

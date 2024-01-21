@@ -3,7 +3,7 @@ import {Col, Row} from "reactstrap";
 import LoaderSpinner from "../components/utils/loader-spinner";
 import _ from "lodash";
 import {supabase} from "../components/appUtill";
-
+import HomeCarousel from "../views/partials/home-carousel";
 
 
 function Home() {
@@ -19,7 +19,7 @@ function Home() {
 
     const getPlants = async () => {
         try {
-            const { data, error } = await supabase
+            const {data, error} = await supabase
                 .from('plant')
                 .select('*');
 
@@ -37,9 +37,7 @@ function Home() {
     };
 
 
-
     console.log(plants);
-
 
 
     if (!isLoaded) {
@@ -51,18 +49,7 @@ function Home() {
 
         return (
             <div>
-                <h1>Home</h1>
-                {!_.isEmpty(plants) && plants.map((plant) => (
-
-                    <Row key={plant.id}>
-                        <Col>Name:{plant.plantName}</Col>
-                        <Col>description:{plant.plantDescription}</Col>
-                        <Col>{plant.plantPrice}</Col>
-                        <Col>{plant.plantType}</Col>
-                    </Row>
-                ))
-                }
-
+                <HomeCarousel/>
             </div>
         )
 
