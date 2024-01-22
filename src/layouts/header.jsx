@@ -11,14 +11,14 @@ function Header() {
 
     return (
         <div>
-            <Navbar className={"nav_bar"}>
+            <Navbar className={"nav_bar mb-3"}>
                 <NavbarBrand href="/">
                     <img className="nav_logo" src={logo}/>
                 </NavbarBrand>
                 <div className="me-right">
-                    <NavbarText className={'me-2'}><Link to={'/'}>Home</Link></NavbarText>
-                    <NavbarText className={'me-2'}><Link to={'/products'}>Our Products</Link></NavbarText>
-                    <NavbarText className={'me-2'}><Link to={'/about-us'}>About Us</Link></NavbarText>
+                    <NavbarText className={'me-4'}><Link to={'/'}>Home</Link></NavbarText>
+                    <NavbarText className={'me-4'}><Link to={'/products'}>Our Products</Link></NavbarText>
+                    <NavbarText className={'me-4'}><Link to={'/about-us'}>About Us</Link></NavbarText>
 
                 </div>
             </Navbar>

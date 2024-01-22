@@ -1,9 +1,3 @@
-/* basic style */
-
-/*
-primarary :#FFB534
-
-*/
 
 
 body {
@@ -65,8 +59,8 @@ body {
     min-height: 80vh;
 }
 
-.nav_bar{
-    /*background-color: #eedaa5;*/
+.navbar-text a{
+   text-decoration: none!important;
 }
 
 .color-ring-wrapper{
@@ -98,4 +92,7 @@ body {
     max-width: 100%;
     overflow: hidden;
 }
-
+.carousel_img{
+    aspect-ratio: 12/4;
+    /*opacity: 0.9*/
+}

@@ -5,7 +5,7 @@ import {Button, Carousel, CarouselCaption, CarouselControl, CarouselIndicators, 
 
 const items = [
     {
-        src: 'https://picsum.photos/id/123/1200/400',
+        src: 'https://ik.imagekit.io/vf98dviiq/nuersery/landing-page/c1.jpg',
         altText: 'Slide 1',
         caption: 'Slide 1',
         key: 1,
@@ -17,7 +17,7 @@ const items = [
         key: 2,
     },
     {
-        src: 'https://picsum.photos/id/678/1200/400',
+        src: 'https://ik.imagekit.io/vf98dviiq/nuersery/landing-page/c3.jpg',
         altText: 'Slide 3',
         caption: 'Slide 3',
         key: 3,
@@ -26,7 +26,7 @@ const items = [
 function HomeCarousel() {
 
     const [activeIndex, setActiveIndex] = useState(0);
-    const [animating, setAnimating] = useState(false);
+    const [animating, setAnimating] = useState(true);
 
     const next = () => {
         if (animating) return;
@@ -52,7 +52,7 @@ function HomeCarousel() {
                 onExited={() => setAnimating(false)}
                 key={item.src}
             >
-                <img src={item.src} alt={item.altText} width={'100%'}/>
+                <img src={item.src} className={'carousel_img'} alt={item.altText} width={'100%'} />
                 <Button className={'carousel_btn'} color={'primary'}>Shop Now</Button>
                 <CarouselCaption
                     captionText={item.caption}

@@ -20,7 +20,7 @@ function Home() {
     const getPlants = async () => {
         try {
             const {data, error} = await supabase
-                .from('plant')
+                .from('products')
                 .select('*');
 
             if (error) {
