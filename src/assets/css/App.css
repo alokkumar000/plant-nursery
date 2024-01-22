@@ -1,5 +1,4 @@
 
-
 body {
     padding: 0;
     margin: 0;
@@ -50,20 +49,18 @@ body {
 }
 
 
-
-
-
 /*==========================================*/
 
 .body_view {
     min-height: 80vh;
+    margin-top: 90px;
 }
 
-.navbar-text a{
-   text-decoration: none!important;
+.navbar-text a {
+    text-decoration: none !important;
 }
 
-.color-ring-wrapper{
+.color-ring-wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -71,28 +68,132 @@ body {
 }
 
 
-.product_card{
+.product_card {
     border: none !important;
     border-radius: 20px;
     box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
     cursor: pointer;
 }
 
-.product_card:hover{
+.product_card:hover {
     box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .5);
 }
 
-.product_card > product_image{
+.product_card > product_image {
     border-radius: 20px 20px 0 0;
 
 }
 
-.img_trim{
+.img_trim {
     max-height: 200px;
     max-width: 100%;
     overflow: hidden;
 }
-.carousel_img{
-    aspect-ratio: 12/4;
-    /*opacity: 0.9*/
+
+.carousel_img {
+    aspect-ratio: 15/7;
+    opacity: 0.9
 }
+
+.nav_bar {
+    box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+}
+
+.carousel-caption {
+    top: 25%;
+}
+
+.carousel-caption > h3 {
+    font-size: 65px;
+    letter-spacing: 2px;
+}
+
+.carousel_btn {
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.carousel_e2e {
+    margin: 0 -12px 0 -12px;
+}
+
+.sec_2 {
+    color: #2c9506;
+    letter-spacing: 2px;
+}
+
+.sec_4_header {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.sec_3_card {
+    border: none !important;
+    border-radius: 0px !important;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+    cursor: pointer;
+}
+
+.sec_3_card:hover {
+    border-radius: 0px !important;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .5);
+}
+
+.sec_3_cardimg_trim {
+    max-height: 350px;
+    max-width: 100%;
+    overflow: hidden;
+    aspect-ratio: 153/161;
+}
+
+/* Bounce To Right */
+.sec_3_cardbody {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.sec_3_cardbody:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #16A085;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F4D03F, #16A085);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F4D03F, #16A085); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.sec_3_cardbody:hover, .sec_3_cardbody:focus, .sec_3_cardbody:active {
+    color: white;
+}
+.sec_3_cardbody:hover:before, .sec_3_cardbody:focus:before, .sec_3_cardbody:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+

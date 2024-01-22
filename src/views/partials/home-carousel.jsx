@@ -1,33 +1,34 @@
-
 import React, {useEffect, useRef, useState} from "react";
 import {Button, Carousel, CarouselCaption, CarouselControl, CarouselIndicators, CarouselItem} from "reactstrap";
+import {Link} from "react-router-dom";
 
 
 const items = [
     {
         src: 'https://ik.imagekit.io/vf98dviiq/nuersery/landing-page/c1.jpg',
         altText: 'Slide 1',
-        caption: 'Slide 1',
+        caption: 'Gardening, elevated.',
         key: 1,
     },
     {
-        src: 'https://picsum.photos/id/456/1200/400',
+        src: 'https://ik.imagekit.io/vf98dviiq/nuersery/landing-page/c2.jpeg',
         altText: 'Slide 2',
         caption: 'Slide 2',
         key: 2,
     },
     {
-        src: 'https://ik.imagekit.io/vf98dviiq/nuersery/landing-page/c3.jpg',
+        src: 'https://ik.imagekit.io/vf98dviiq/nuersery/landing-page/c3.jpeg',
         altText: 'Slide 3',
         caption: 'Slide 3',
         key: 3,
     },
 ];
+
 function HomeCarousel() {
 
     const [activeIndex, setActiveIndex] = useState(0);
-    const [animating, setAnimating] = useState(true);
-
+    const [animating, setAnimating] = useState(false);
+    const curULR = window.location.href;
     const next = () => {
         if (animating) return;
         const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
@@ -52,17 +53,16 @@ function HomeCarousel() {
                 onExited={() => setAnimating(false)}
                 key={item.src}
             >
-                <img src={item.src} className={'carousel_img'} alt={item.altText} width={'100%'} />
-                <Button className={'carousel_btn'} color={'primary'}>Shop Now</Button>
+                <img src={item.src} className={'carousel_img'} alt={item.altText} width={'100%'}/>
+
                 <CarouselCaption
-                    captionText={item.caption}
+                    // captionText={item.caption}
                     captionHeader={item.caption}
                 />
+                <Link to={`${curULR}products`} ><Button className={'carousel_btn  btn-light btn-lg'}>View Products</Button></Link>
             </CarouselItem>
         );
     });
-
-
 
 
     return (
@@ -71,6 +71,7 @@ function HomeCarousel() {
                 activeIndex={activeIndex}
                 next={next}
                 previous={previous}
+                className={'carousel_e2e'}
 
             >
                 <CarouselIndicators
@@ -93,7 +94,6 @@ function HomeCarousel() {
 
         </div>
     )
-
 
 
 }

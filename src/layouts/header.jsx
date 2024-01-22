@@ -11,16 +11,18 @@ function Header() {
 
     return (
         <div>
-            <Navbar className={"nav_bar mb-3"}>
-                <NavbarBrand href="/">
+            <Navbar className={"nav_bar fixed-top  bg-light navbar-light mb-3"}>
+
+                <NavbarBrand href="/" style={{marginLeft:'3%'}}>
                     <img className="nav_logo" src={logo}/>
                 </NavbarBrand>
-                <div className="me-right">
+                <div className="me-right" style={{marginRight:'3%'}}>
                     <NavbarText className={'me-4'}><Link to={'/'}>Home</Link></NavbarText>
                     <NavbarText className={'me-4'}><Link to={'/products'}>Our Products</Link></NavbarText>
                     <NavbarText className={'me-4'}><Link to={'/about-us'}>About Us</Link></NavbarText>
 
                 </div>
+
             </Navbar>
 
 
