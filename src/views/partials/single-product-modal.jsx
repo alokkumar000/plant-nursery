@@ -40,6 +40,26 @@ function SingleProductModal(props) {
                 <ModalHeader toggle={toggle}>Buy {props.plant.plantName}</ModalHeader>
                 <ModalBody>
                    Call us at 1-800-PLANTS-4-U to order {props.plant.plantName} today!
+                    <div>Or</div>
+                    <div>Fill out the form below to request a call back</div>
+                    <div>Our team will reach out to you within 24 hours</div>
+                    <div className={'mt-3'}>
+                        <form>
+                            <div className="form-group">
+                                <label htmlFor="exampleInputEmail1">Name</label>
+                                <input type="text" className="form-control" id="exampleInputEmail1"
+                                       aria-describedby="emailHelp" placeholder="Enter name"/>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="exampleInputPassword1">Phone Number</label>
+                                <input type="text" className="form-control" id="exampleInputPassword1"
+                                       placeholder="Enter phone number"/>
+                            </div>
+
+                            <button type="submit" className="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+
                 </ModalBody>
                 <ModalFooter>
                     <Button color="primary" onClick={toggle}>
