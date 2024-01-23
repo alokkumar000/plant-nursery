@@ -4,7 +4,7 @@ import LoaderSpinner from "../components/utils/loader-spinner";
 import _ from "lodash";
 import {Button, Card, CardBody, CardText, CardTitle, Col, Row} from "reactstrap";
 import SingleProductModal from "../views/partials/single-product-modal";
-
+import plantImage from "../assets/Image/seasonal.jpg";
 
 function Products() {
 
@@ -57,7 +57,8 @@ function Products() {
                                 <div className={'img_trim'}>
                                 <img
                                     alt="Sample" className={'product_image img-fluid'   }
-                                    src={plant.plantImage}
+                                    // src={plant.plantImage}
+                                    src={plantImage}
                                 />
                                 </div>
                                 <CardBody>

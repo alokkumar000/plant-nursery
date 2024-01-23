@@ -2,6 +2,8 @@ import React, {useEffect, useRef, useState} from "react";
 import {Card, CardBody, CardTitle, Col, Row} from "reactstrap";
 import livePlant from  "../../assets/Image/live-plants.jpg"
 import potTools from  "../../assets/Image/pots & tools.jpg"
+import seasonalVariety from  "../../assets/Image/seasonal.jpg"
+import seed from  "../../assets/Image/seeds.jpg"
 
 function HomeSectionThree() {
 
@@ -41,7 +43,7 @@ function HomeSectionThree() {
                         <div className={'sec_3_cardimg_trim'}>
                             <img
                                 alt="Sample" className={'product_image img-fluid'}
-                                // src={potTools}
+                                src={seed}
                             />
                         </div>
                         <CardBody className={'sec_3_cardbody '}>
@@ -60,7 +62,7 @@ function HomeSectionThree() {
                         <div className={'sec_3_cardimg_trim'}>
                             <img
                                 alt="Sample" className={'product_image img-fluid'}
-                                // src={plant.plantImage}
+                                src={seasonalVariety}
                             />
                         </div>
                         <CardBody className={'sec_3_cardbody'}>
