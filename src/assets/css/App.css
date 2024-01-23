@@ -151,6 +151,13 @@ body {
     aspect-ratio: 153/161;
 }
 
+.sec_4_cardimg_trim {
+    max-height: 300px;
+    max-width: 100%;
+    overflow: hidden;
+    aspect-ratio: 153/161;
+}
+
 /* Bounce To Right */
 .sec_3_cardbody {
     display: inline-block;

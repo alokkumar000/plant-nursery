@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import {Button, Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";
+import {Button, CardBody, CardTitle, Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";
 import {supabase} from "../../components/appUtill";
 
 
@@ -55,11 +55,18 @@ function SingleProductModal(props) {
 
 
     return (
-        <div>
+        <>
+            <CardBody className={'sec_3_cardbody '} onClick={toggle}>
+                <CardTitle className={' px-1'}>
+                    <div>
+                        <span className={'fs-5'}>{props.plant.plantName}</span>
 
-            <Button onClick={toggle} className={'d-inline-block'}>
-                Button
-            </Button>
+                    </div>
+                    <div><small>Price : &#8377;{props.plant.plantPrice}</small></div>
+
+                </CardTitle>
+            </CardBody>
+
 
             <Modal isOpen={modal} toggle={toggle}>
                 <ModalHeader toggle={toggle}>Buy {props.plant.plantName}</ModalHeader>
@@ -96,7 +103,7 @@ function SingleProductModal(props) {
                 </ModalFooter>
             </Modal>
 
-        </div>
+        </>
     )
 
 

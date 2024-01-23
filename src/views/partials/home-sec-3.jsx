@@ -4,10 +4,16 @@ import livePlant from  "../../assets/Image/live-plants.jpg"
 import potTools from  "../../assets/Image/pots & tools.jpg"
 import seasonalVariety from  "../../assets/Image/seasonal.jpg"
 import seed from  "../../assets/Image/seeds.jpg"
+import {supabase} from "../../components/appUtill";
 
 function HomeSectionThree() {
 
     const [isLoaded, set_isLoaded] = useState(false);
+
+
+
+
+
 
 
     // if (!isLoaded) {

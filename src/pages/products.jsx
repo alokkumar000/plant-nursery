@@ -53,27 +53,16 @@ function Products() {
                     {!_.isEmpty(plants) && plants.map((plant) => (
 
                         <Col key={plant.id} md={3}>
-                            <Card key={plant.id} className={'product_card mb-3'}>
-                                <div className={'img_trim'}>
+                            <Card key={plant.id} className={'sec_3_card mb-3'}>
+                                <div className={'sec_4_cardimg_trim'}>
                                 <img
                                     alt="Sample" className={'product_image img-fluid'   }
                                     // src={plant.plantImage}
                                     src={plantImage}
                                 />
                                 </div>
-                                <CardBody>
-                                    <CardTitle tag="h5">
-                                        {plant.plantName}
 
-                                        {plant.plantPrice}
-                                    </CardTitle>
-
-                                    <CardText>
-                                        {plant.plantDescription}
-                                    </CardText>
-                                    <SingleProductModal plant={plant}/>
-                                </CardBody>
-
+                                <SingleProductModal plant={plant}/>
                             </Card>
                         </Col>
                     ))}
