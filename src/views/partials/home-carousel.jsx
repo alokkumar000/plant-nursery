@@ -60,7 +60,7 @@ function HomeCarousel() {
                     // captionText={item.caption}
                     captionHeader={item.caption}
                 />
-                <Link to={`${curULR}products`}><Button className={isMobile ? '' : 'carousel_btn  btn-light btn-lg'}>View
+                <Link to={`${curULR}products`}><Button className={isMobile ? 'd-none' : 'carousel_btn  btn-light btn-lg'}>View
                     Products</Button></Link>
             </CarouselItem>
         );
