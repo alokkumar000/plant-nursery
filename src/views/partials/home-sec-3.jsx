@@ -97,7 +97,7 @@ function HomeSectionThree() {
                                             <Col md={10} sm={10} xs={10}>
                                                 <div>Seasonal Variety</div>
                                             </Col>
-                                            <Col md={2} sm={2} xs={10}>
+                                            <Col md={2} sm={2} xs={2}>
                                                 <div className={'text-end'}>
                                                     <i className="fa fa-chevron-right"></i>
                                                 </div>
