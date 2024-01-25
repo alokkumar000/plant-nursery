@@ -1,19 +1,17 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useState} from "react";
 import {Card, CardBody, CardTitle, Col, Row} from "reactstrap";
-import livePlant from  "../../assets/Image/live-plants.jpg"
-import potTools from  "../../assets/Image/pots & tools.jpg"
-import seasonalVariety from  "../../assets/Image/seasonal.jpg"
-import seed from  "../../assets/Image/seeds.jpg"
-import {supabase} from "../../components/appUtill";
+import livePlant from "../../assets/Image/live-plants.jpg"
+import potTools from "../../assets/Image/pots & tools.jpg"
+import seasonalVariety from "../../assets/Image/seasonal.jpg"
+import seed from "../../assets/Image/seeds.jpg"
+import {Link} from "react-router-dom";
+import {Animated} from "react-animated-css";
+
 
 function HomeSectionThree() {
 
     const [isLoaded, set_isLoaded] = useState(false);
-
-
-
-
-
+    const curULR = window.location.href;
 
 
     // if (!isLoaded) {
@@ -26,80 +24,120 @@ function HomeSectionThree() {
 
             <Row>
                 <Col md={3}>
-                    <Card className={'sec_3_card mb-3'}>
-                        <div className={'sec_3_cardimg_trim'}>
-                            <img
-                                alt="Sample" className={'product_image img-fluid'}
-                                src={livePlant}
-                            />
-                        </div>
-                        <CardBody className={'sec_3_cardbody'}>
-                            <CardTitle tag="h5" className={'d-flex px-2'}>
-                                <div> Live Plants</div>
-                                <div className={'ms-auto'}>
-                                    <i className="fa fa-chevron-right"></i>
-                                </div>
-                            </CardTitle>
-                        </CardBody>
-
-                    </Card>
+                    <Animated animationIn="slideInUp" animationOut="fadeOut" isVisible={true}>
+                        <Card className={'sec_3_card mb-3'}>
+                            <div className={'sec_3_cardimg_trim'}>
+                                <img
+                                    alt="Sample" className={'product_image img-fluid'}
+                                    src={livePlant}
+                                />
+                            </div>
+                            <Link to={`${curULR}live-plants`}>
+                                <CardBody className={'sec_3_cardbody fs-5'}>
+                                    <CardTitle className={' px-2'}>
+                                        <Row>
+                                            <Col md={10}>
+                                                <div>Live Plants</div>
+                                            </Col>
+                                            <Col md={2}>
+                                                <div className={'text-end'}>
+                                                    <i className="fa fa-chevron-right"></i>
+                                                </div>
+                                            </Col>
+                                        </Row>
+                                    </CardTitle>
+                                </CardBody>
+                            </Link>
+                        </Card>
+                    </Animated>
                 </Col>
                 <Col md={3}>
-                    <Card className={'sec_3_card mb-3'}>
-                        <div className={'sec_3_cardimg_trim'}>
-                            <img
-                                alt="Sample" className={'product_image img-fluid'}
-                                src={seed}
-                            />
-                        </div>
-                        <CardBody className={'sec_3_cardbody '}>
-                            <CardTitle tag="h5" className={'d-flex px-2'}>
-                                <div>  Plant Seeds</div>
-                                <div className={'ms-auto'}>
-                                    <i className="fa fa-chevron-right"></i>
-                                </div>
-                            </CardTitle>
-                        </CardBody>
+                    <Animated animationIn="slideInUp" animationOut="fadeOut" isVisible={true}>
+                        <Card className={'sec_3_card mb-3'}>
+                            <div className={'sec_3_cardimg_trim'}>
+                                <img
+                                    alt="Sample" className={'product_image img-fluid'}
+                                    src={seed}
+                                />
+                            </div>
+                            <Link to={`${curULR}seeds`}>
+                                <CardBody className={'sec_3_cardbody fs-5'}>
+                                    <CardTitle className={' px-2'}>
+                                        <Row>
+                                            <Col md={10}>
+                                                <div>Plant Seed</div>
+                                            </Col>
+                                            <Col md={2}>
+                                                <div className={'text-end'}>
+                                                    <i className="fa fa-chevron-right"></i>
+                                                </div>
+                                            </Col>
+                                        </Row>
+                                    </CardTitle>
+                                </CardBody>
+                            </Link>
 
-                    </Card>
+
+                        </Card>
+                    </Animated>
                 </Col>
                 <Col md={3}>
-                    <Card className={'sec_3_card mb-3'}>
-                        <div className={'sec_3_cardimg_trim'}>
-                            <img
-                                alt="Sample" className={'product_image img-fluid'}
-                                src={seasonalVariety}
-                            />
-                        </div>
-                        <CardBody className={'sec_3_cardbody'}>
-                            <CardTitle tag="h5" className={'d-flex px-2'}>
-                                <div>Seasonal Variety</div>
-                                <div className={'ms-auto'}>
-                                    <i className="fa fa-chevron-right"></i>
-                                </div>
-                            </CardTitle>
-                        </CardBody>
+                    <Animated animationIn="slideInUp" animationOut="fadeOut" isVisible={true}>
+                        <Card className={'sec_3_card mb-3'}>
+                            <div className={'sec_3_cardimg_trim'}>
+                                <img
+                                    alt="Sample" className={'product_image img-fluid'}
+                                    src={seasonalVariety}
+                                />
+                            </div>
+                            <Link to={`${curULR}seasonal-variety`}>
+                                <CardBody className={'sec_3_cardbody fs-5'}>
+                                    <CardTitle className={' px-2'}>
+                                        <Row>
+                                            <Col md={10}>
+                                                <div>Seasonal Variety</div>
+                                            </Col>
+                                            <Col md={2}>
+                                                <div className={'text-end'}>
+                                                    <i className="fa fa-chevron-right"></i>
+                                                </div>
+                                            </Col>
+                                        </Row>
 
-                    </Card>
+
+                                    </CardTitle>
+                                </CardBody>
+                            </Link>
+                        </Card>
+                    </Animated>
                 </Col>
                 <Col md={3}>
-                    <Card className={'sec_3_card mb-3'}>
-                        <div className={'isec_3_cardimg_trim'}>
-                            <img
-                                alt="Sample" className={'product_image img-fluid'}
-                                src={potTools}
-                            />
-                        </div>
-                        <CardBody className={'sec_3_cardbody'}>
-                            <CardTitle tag="h5" className={'d-flex px-2'}>
-                                <div> Pots & Tools</div>
-                                <div className={'ms-auto'}>
-                                    <i className="fa fa-chevron-right"></i>
-                                </div>
-                            </CardTitle>
-                        </CardBody>
-
-                    </Card>
+                    <Animated animationIn="slideInUp" animationOut="fadeOut" isVisible={true}>
+                        <Card className={'sec_3_card mb-3'}>
+                            <div className={'sec_3_cardimg_trim'}>
+                                <img
+                                    alt="Sample" className={'product_image img-fluid'}
+                                    src={potTools}
+                                />
+                            </div>
+                            <Link to={`${curULR}pots-tools`}>
+                                <CardBody className={'sec_3_cardbody fs-5'}>
+                                    <CardTitle className={' px-2'}>
+                                        <Row>
+                                            <Col md={10}>
+                                                <div>Pots & Tools</div>
+                                            </Col>
+                                            <Col md={2}>
+                                                <div className={'text-end'}>
+                                                    <i className="fa fa-chevron-right"></i>
+                                                </div>
+                                            </Col>
+                                        </Row>
+                                    </CardTitle>
+                                </CardBody>
+                            </Link>
+                        </Card>
+                    </Animated>
                 </Col>
             </Row>
 

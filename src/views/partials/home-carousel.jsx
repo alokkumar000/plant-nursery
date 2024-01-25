@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from "react";
 import {Button, Carousel, CarouselCaption, CarouselControl, CarouselIndicators, CarouselItem} from "reactstrap";
 import {Link} from "react-router-dom";
+import {isMobile} from "react-device-detect";
 
 
 const items = [
@@ -13,13 +14,13 @@ const items = [
     {
         src: 'https://ik.imagekit.io/vf98dviiq/nuersery/landing-page/c2.jpeg',
         altText: 'Slide 2',
-        caption: 'Slide 2',
+        caption: 'Explore our plant haven',
         key: 2,
     },
     {
         src: 'https://ik.imagekit.io/vf98dviiq/nuersery/landing-page/c3.jpeg',
         altText: 'Slide 3',
-        caption: 'Slide 3',
+        caption: 'Unleash your inner botanist.',
         key: 3,
     },
 ];
@@ -59,7 +60,8 @@ function HomeCarousel() {
                     // captionText={item.caption}
                     captionHeader={item.caption}
                 />
-                <Link to={`${curULR}products`} ><Button className={'carousel_btn  btn-light btn-lg'}>View Products</Button></Link>
+                <Link to={`${curULR}products`}><Button className={isMobile ? '' : 'carousel_btn  btn-light btn-lg'}>View
+                    Products</Button></Link>
             </CarouselItem>
         );
     });

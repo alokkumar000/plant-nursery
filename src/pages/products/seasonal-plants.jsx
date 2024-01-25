@@ -1,18 +1,26 @@
-import React, {useEffect, useRef, useState} from "react";
-import {Card, CardBody, CardTitle, Col, Row} from "reactstrap";
+import React, {useEffect, useState} from "react";
+import {Card, Col, Row} from "reactstrap";
 import seed from "../../assets/Image/seeds.jpg";
 import {supabase} from "../../components/appUtill";
-import LoaderSpinner from "../../components/utils/loader-spinner";
-import SingleProductModal from "./single-product-modal";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import SingleProductModal from "../../views/partials/single-product-modal";
+import _ from "lodash";
 import {Animated} from "react-animated-css";
 
 
-function HomeSectionFour() {
+function SeasonalPlants() {
 
     const [isLoaded, set_isLoaded] = useState(false);
     const [plants, set_plants] = useState([]);
     const [seasonalPlants, set_seasonalPlants] = useState([]);
+
+
+    function getClassContainer() {
+        if (window.location.href.includes('products')) {
+            return ''
+        } else {
+            return 'container py-4'
+        }
+    }
 
 
     const getPlants = async () => {
@@ -54,7 +62,7 @@ function HomeSectionFour() {
 
     useEffect(() => {
         getPlants();
-
+        window.scrollTo(0, 0);
     }, []);
 
     useEffect(() => {
@@ -62,21 +70,19 @@ function HomeSectionFour() {
         set_seasonalPlants(seasonalPlants);
     }, [plants]);
 
-
-   /* if (!isLoaded) {
-        return <div style={{marginTop: '15%'}}><LoaderSpinner/></div>
-    } else {*/
-
-
+    if (!_.isEmpty(seasonalPlants)) {
         return (
-            <div>
+            <div className={getClassContainer()}>
+                <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
+                <h1 className={'text_green mb-3'}>Seasonal Variety</h1>
+                </Animated>
                 <Row>
                     {seasonalPlants.map((plant) => (
                         <Col md={3}>
-                            <Animated animationIn="slideInUp" animationOut="fadeOut" isVisible={true} >
+                            <Animated animationIn="slideInUp" animationOut="fadeOut" isVisible={true}>
                             <Card className={'sec_3_card mb-3'}>
                                 <div className={'sec_4_cardimg_trim'}>
-                                   {/* <LazyLoadImage
+                                    {/* <LazyLoadImage
                                         alt={image.alt}
                                         height={image.height}
                                         src={image.src} // use normal <img> attributes as props
@@ -86,22 +92,22 @@ function HomeSectionFour() {
                                         src={seed}
                                     />
                                 </div>
-                               <SingleProductModal plant={plant}/>
+                                <SingleProductModal plant={plant}/>
 
                             </Card>
-                        {/*=========================contact modal=================================*/}
-                            </Animated>
+                            {/*=========================contact modal=================================*/}
 
+                            </Animated>
                         </Col>
                     ))}
                 </Row>
             </div>
         )
-    // }
+    }
 
 }
 
-export default HomeSectionFour;
+export default SeasonalPlants;
 
 
 

@@ -15,7 +15,7 @@ function Footer() {
     return (
         <div>
 
-            <div className=" site_footer  text-center mt-4"> &copy; | {getCurYear()} <img height={15} src={footerlogo}/>
+            <div className=" site_footer  text-center mt-4"> &copy; | {getCurYear()} <img height={20} src={footerlogo}/>
             </div>
 
         </div>

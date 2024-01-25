@@ -10,6 +10,16 @@ body {
     background-color: #ffffff !important;
 }
 
+.text_ellipsis{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+.text_green{
+    color: #2c9506;
+}
 .nav_logo {
     width: 100px;
 
@@ -34,10 +44,10 @@ body {
 
 .site_footer {
     padding: 15px 0;
-    font-size: 10px;
+    font-size: 14px;
     line-height: 20px;
     text-decoration: none;
-    border-top: 2px solid #c5c5c5;
+    border-top: 1px solid #c5c5c5;
 }
 
 
@@ -130,6 +140,7 @@ body {
 .sec_4_header {
     font-size: 20px;
     font-weight: 700;
+    color: #2c9506;
 }
 
 .sec_3_card {
@@ -145,23 +156,27 @@ body {
 }
 
 .sec_3_cardimg_trim {
-    max-height: 350px;
+    max-height: 275px;
     max-width: 100%;
     overflow: hidden;
     aspect-ratio: 153/161;
 }
 
 .sec_4_cardimg_trim {
-    max-height: 300px;
+    max-height: 250px;
     max-width: 100%;
     overflow: hidden;
     aspect-ratio: 153/161;
 }
-
+a{
+    text-decoration: none !important;
+    color: #2b2b2b !important;
+}
 /* Bounce To Right */
 .sec_3_cardbody {
-    display: inline-block;
+    /*display: inline-block;*/
     vertical-align: middle;
+
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -204,3 +219,22 @@ body {
     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 
+.contact_us{
+    color: #2c9506;
+    font-size: 60px;
+    /* font-weight: 700; */
+    letter-spacing: 10px;
+}
+
+.contact_us_sub{
+    color: #788573;
+    font-size: 30px;
+    /* font-weight: 700; */
+    letter-spacing: 5px;
+}
+.contact_us_sub_header, .contact_us_sub_text{
+    color: #788573;
+    font-size: 20px;
+    /* font-weight: 700; */
+    letter-spacing: 5px;
+}
