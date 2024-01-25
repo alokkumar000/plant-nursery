@@ -183,14 +183,14 @@ function SingleProductModal(props) {
                             </div>
                         </Col>
                         <Col md={4}>
-                              <img
-                                alt="Sample" className={'product_image img-fluid'}
+                            <img
+                                alt="Sample" className={isMobile ? 'd-none' : 'product_image img-fluid'}
                                 src={callus}
                             />
                         </Col>
                     </Row>
 
-                    <div className={'mt-4 text-end'}>
+                    <div className={isMobile ? 'text-center mt-4' : 'mt-4 text-end'}>
                         <Button color="secondary" outline onClick={toggle}>
                             Cancel
                         </Button>{' '}

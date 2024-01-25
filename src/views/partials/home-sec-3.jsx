@@ -36,10 +36,10 @@ function HomeSectionThree() {
                                 <CardBody className={'sec_3_cardbody fs-5'}>
                                     <CardTitle className={' px-2'}>
                                         <Row>
-                                            <Col md={10}>
+                                            <Col md={10} sm={10} xs={10}>
                                                 <div>Live Plants</div>
                                             </Col>
-                                            <Col md={2}>
+                                            <Col md={2} sm={2} xs={2}>
                                                 <div className={'text-end'}>
                                                     <i className="fa fa-chevron-right"></i>
                                                 </div>
@@ -64,10 +64,10 @@ function HomeSectionThree() {
                                 <CardBody className={'sec_3_cardbody fs-5'}>
                                     <CardTitle className={' px-2'}>
                                         <Row>
-                                            <Col md={10}>
+                                            <Col md={10} sm={10} xs={10}>
                                                 <div>Plant Seed</div>
                                             </Col>
-                                            <Col md={2}>
+                                            <Col md={2} sm={2} xs={2}>
                                                 <div className={'text-end'}>
                                                     <i className="fa fa-chevron-right"></i>
                                                 </div>
@@ -94,10 +94,10 @@ function HomeSectionThree() {
                                 <CardBody className={'sec_3_cardbody fs-5'}>
                                     <CardTitle className={' px-2'}>
                                         <Row>
-                                            <Col md={10}>
+                                            <Col md={10} sm={10} xs={10}>
                                                 <div>Seasonal Variety</div>
                                             </Col>
-                                            <Col md={2}>
+                                            <Col md={2} sm={2} xs={10}>
                                                 <div className={'text-end'}>
                                                     <i className="fa fa-chevron-right"></i>
                                                 </div>
@@ -124,10 +124,10 @@ function HomeSectionThree() {
                                 <CardBody className={'sec_3_cardbody fs-5'}>
                                     <CardTitle className={' px-2'}>
                                         <Row>
-                                            <Col md={10}>
+                                            <Col md={10} sm={10} xs={10}>
                                                 <div>Pots & Tools</div>
                                             </Col>
-                                            <Col md={2}>
+                                            <Col md={2} sm={2} xs={2}>
                                                 <div className={'text-end'}>
                                                     <i className="fa fa-chevron-right"></i>
                                                 </div>

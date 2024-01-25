@@ -12,6 +12,7 @@ import SeasonalPlants from "../pages/products/seasonal-plants";
 import LivePlants from "../pages/products/live-plants";
 import Seeds from "../pages/products/seeds";
 import Tools from "../pages/products/tools";
+import {isMobile} from "react-device-detect";
 
 function Fulllayout() {
 
@@ -26,19 +27,19 @@ function Fulllayout() {
     return (
         <div>
             <Header/>
-            <div className={'body_view container-fluid'}>
-            <Routes>
-                <Route index path="/" element={<Home/>}/>
-                <Route path="/products" element={<Products/>}/>
-                <Route path="/seasonal-variety" element={<SeasonalPlants/>}/>
-                <Route path="/live-plants" element={<LivePlants/>}/>
-                <Route path="/pots-tools" element={<Tools/>}/>
-                <Route path="/seeds" element={<Seeds/>}/>
+            <div className={isMobile ? 'mobile_view container-fluid' : 'body_view container-fluid'}>
+                <Routes>
+                    <Route index path="/" element={<Home/>}/>
+                    <Route path="/products" element={<Products/>}/>
+                    <Route path="/seasonal-variety" element={<SeasonalPlants/>}/>
+                    <Route path="/live-plants" element={<LivePlants/>}/>
+                    <Route path="/pots-tools" element={<Tools/>}/>
+                    <Route path="/seeds" element={<Seeds/>}/>
 
-                <Route path="/About-Us" element={<AboutUs/>}/>
+                    <Route path="/About-Us" element={<AboutUs/>}/>
 
-                {/*<Route path="*" element={<NoPage />} />*/}
-            </Routes>
+                    {/*<Route path="*" element={<NoPage />} />*/}
+                </Routes>
             </div>
             <Footer/>
         </div>

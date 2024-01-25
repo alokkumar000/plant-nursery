@@ -65,6 +65,10 @@ body {
     min-height: 80vh;
     margin-top: 11vh;
 }
+.mobile_view{
+    margin-top: 13vh;
+    min-height: 80vh;
+}
 
 .navbar-text a {
     text-decoration: none !important;
